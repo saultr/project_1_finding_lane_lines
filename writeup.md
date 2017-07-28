@@ -58,7 +58,9 @@ All the results can be found under the test_images_output folder.
 
 
 #### d) Only for video - In this case a moving average of the slope detected is done. A circular window of 20 frames had been selected. In every frame the newest calculated slope is added and the oldest one removed. Then the 20 values are averaged. In the case that no lines are detected no changes are done and it will keep the previous values.
-An example can be found on:
+The sample videos could be found [here](test_videos).
+
+The video after the transformation are saved on the [test_videos_output](test_videos_output) directory.
 
 All the videos can be found under the test_videos_output folder.	
 
@@ -66,13 +68,13 @@ All the videos can be found under the test_videos_output folder.
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when no lines are detected for a lot of frames. In this case I discard that frames and use the information from the previous ones but it can be lead to errors if the number of noisy frames is too high.
+One potential shortcoming would be what would happen when no lines are detected for a lot of frames. In this case I discard that frames and use the information from the previous ones but it can lead to errors if the number of noisy frames is too high.
 
 Another shortcoming could be if the camera mount is offseted differently. New polygon mask values should be set, it is not self adapting.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to discard the points from the linear regression that are above standard deviation to remove noise and performe it again.
+A possible improvement would be to discard the points from the linear regression that are above standard deviation to remove noise and after performe the linear regresion again.
 
 Another potential improvement could be to reprogram the code into classes to be more clear and reusable.
