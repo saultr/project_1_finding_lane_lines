@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 
 ### 1. Description of the pipeline. 
 
-My pipeline consisted of 5 steps.
+My pipeline consisted of 6 steps.
 
 #### a) Convert the image to grayscale.
 
@@ -44,6 +44,7 @@ This mask will change dependendig of the offset of the camera respect the middle
 ![alt text][image3]
 
 #### e) Hough transform to find all the segments in the image. Parameters used: rho=2, theta=pi/180, threshold=10, min_line_length= 40, max_line_gap=20
+#### f) Merges the output of the Hough transform with the original image to represent the lines on it.
 	
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by introducing the following steps:
 
