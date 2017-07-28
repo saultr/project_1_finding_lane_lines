@@ -20,7 +20,7 @@ The pipeline consists on six steps:
 - Applies a Gaussian blur to the provided image using **cv2.GaussianBlur** method.
 - Use a [Canny transformation](https://en.wikipedia.org/wiki/Canny_edge_detector) to find edges on the image using **cv2.Canny** method.
 - Eliminate parts of the image that are not interesting in regards to the line detection (for now...).
-- Use a [Hough transformation](https://en.wikipedia.org/wiki/Hough_transform) to find the lines on the masked image using **cv2.cv2.HoughLinesP**. It also adjust a line to the set of lines returned by the Hough transformation in order to have a clearer-two-lines representation of the road lines using **np.polyfit** method.
+- Use a [Hough transformation](https://en.wikipedia.org/wiki/Hough_transform) to find the lines on the masked image using **cv2.HoughLinesP**. It also adjust a line to the set of lines returned by the Hough transformation in order to have a clearer-two-lines representation of the road lines using **np.polyfit** method.
 - Merges the output of the hough transform with the original image to represent the lines on it.
 
 First, the pipeline is tested agains the images contained at [test_images](test_images).
