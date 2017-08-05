@@ -46,7 +46,7 @@ This mask will change dependendig of the offset of the camera respect the middle
 #### e) Hough transform to find all the segments in the image. Parameters used: rho=2, theta=pi/180, threshold=10, min_line_length= 40, max_line_gap=20
 #### f) Merges the output of the Hough transform with the original image to represent the lines on it.
 	
-In order to draw a single line on the left and right lanes, Ihave modified the draw_lines() function by introducing the following steps:
+In order to draw a single line on the left and right lanes, I have modified the draw_lines() function by introducing the following steps:
 
 #### a) Split segments in left and right according its slope. Filter also by slope limits. 0.4 to 0.8 (right) and -0.4 to -0.8 (left). The rest of the lines are discarded.
 	
